@@ -1,0 +1,45 @@
+{
+  "schema": "FM-FASTBEV-DECODER-RANGEFIX/1",
+  "status": "HOST_VALIDATED_PENDING_BOARD",
+  "hardware_validated": false,
+  "detection_accuracy_validated": false,
+  "compiler_sdk": "3.39.0",
+  "files": {
+    "CHANGE.txt": {
+      "bytes": 909,
+      "sha256": "dcaf679a254d3f7c63792205db630ff6c29b9780099ad9a534f2545b17e61588"
+    },
+    "CLASSIFICATION_DIAGNOSTICS.json": {
+      "bytes": 1876,
+      "sha256": "6f8d10275acf0d80178028962648f1af8a51b24913b33ccfbc37fc9c7e75d130"
+    },
+    "COMPILATION.json": {
+      "bytes": 8013,
+      "sha256": "71b40184b11f6498693631a8e59723d4a97690354c66f0f548e9be7fa41c82aa"
+    },
+    "fastbev_part3_nuscenes_ZG.json": {
+      "bytes": 104400,
+      "sha256": "f17006c3ad87c86473775f358380a234de8a1c77ec8daf67f338885a7d73ac22"
+    },
+    "fastbev_part3_nuscenes_ZG.raw": {
+      "bytes": 13407144,
+      "sha256": "95354998749efdcd100fd46f11ba9e26e55b2dacfb889c7f91134e70ff5a2b79"
+    },
+    "HOST_COMPARISON.json": {
+      "bytes": 2522,
+      "sha256": "37a52da2f4c961e368d4c4e3a51825e510b03674e25871d339d09c2d741f68c7"
+    },
+    "HOST_OUTPUTS.npz": {
+      "bytes": 6720766,
+      "sha256": "fdf052e754392a4a1f561fb2220e3ea25e1a7fbb97fa9637754e2403415aea82"
+    },
+    "INTERFACE_AUDIT.json": {
+      "bytes": 1102,
+      "sha256": "d01ffe2bb740ef735d796507f8c8b60162c0ef97b349bba2b6370ba776047ecf"
+    },
+    "mix.csv": {
+      "bytes": 1897,
+      "sha256": "8734e77bb7a9309a9d3ac926f8fdcca5a5e51cab177eb17a291794eaebd26048"
+    }
+  }
+}

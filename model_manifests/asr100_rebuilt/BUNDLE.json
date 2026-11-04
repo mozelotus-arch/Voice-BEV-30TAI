@@ -1,0 +1,127 @@
+{
+  "schema": "voice-model-bundle-v1",
+  "name": "asr100_rebuilt_icraft339_candidate",
+  "adapter": "sensevoice-100-acoustic-plus-4-query-split-v1",
+  "compiler_sdk": "3.39.0",
+  "target": "ZG330",
+  "files": {
+    "network_json": {
+      "path": "network.json",
+      "bytes": 9349864,
+      "sha256": "f9f0709813946e69b832aace065f7f7d6908ae01abf3288ac66c2fbb0bc7d141"
+    },
+    "network_raw": {
+      "path": "network.raw",
+      "bytes": 532090724,
+      "sha256": "d700ab0f9d9d75bd1d8236827f717c580bde2e23a7c21d9b3ee93b44c5d1e30b"
+    },
+    "compile_receipt": {
+      "path": "COMPILATION.json",
+      "bytes": 5047,
+      "sha256": "4c086347e9484cb5920435db02f9176cffc24e472f748b8d102e28efb6a2bcab"
+    },
+    "compiled_contract": {
+      "path": "COMPILED_CONTRACT.json",
+      "bytes": 2135,
+      "sha256": "e15c2236baa032392b55c46e42f9119931e2907a718be350c3a490b2e9cb4022"
+    },
+    "adapter_config": {
+      "path": "ADAPTER.json",
+      "bytes": 758,
+      "sha256": "eddcb11d48e940a52bcc9bf61bcfb9af5b2f528aed6e6b1312fe36c21a88a17d"
+    },
+    "query_embeddings": {
+      "path": "query_embeddings.npy",
+      "bytes": 35968,
+      "sha256": "83cf1fc5680fdf6d7edb411be5ce351cad4eca03b29a5bf5050aa19dfcc12267"
+    },
+    "position_encoding": {
+      "path": "position_encoding.npy",
+      "bytes": 233088,
+      "sha256": "74eb07875084d52ef9bfff1924150dcab709f78fcba4ce52e935357d66b6869b"
+    },
+    "cmvn": {
+      "path": "am.mvn",
+      "bytes": 11203,
+      "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+    },
+    "tokenizer": {
+      "path": "tokenizer.model",
+      "bytes": 377341,
+      "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+    },
+    "export_receipt": {
+      "path": "EXPORT.json",
+      "bytes": 675,
+      "sha256": "514533db4b7a803a8adee6bf251eaa4c74975aec2c30a36de7edd0acdd16d81c"
+    },
+    "source_split_evidence": {
+      "path": "SPLIT_VALIDATION.json",
+      "bytes": 1529,
+      "sha256": "fc99d29efc586dad8c67f5da1c99e2fef9359a41fd1bb73fc5646668e70e772b"
+    },
+    "onnx_validation": {
+      "path": "ONNX_VALIDATION.json",
+      "bytes": 663,
+      "sha256": "2e673160031df6cb6ea9494ced5d45989d6e7a914681be3341f37ef9b848bbd9"
+    },
+    "historical_replay": {
+      "path": "HISTORICAL_REPLAY.json",
+      "bytes": 5916,
+      "sha256": "ebdebda47ece6eb4f9622ef655e83f1c53dcafad6012d531c71d07c4c4b3f20a"
+    },
+    "mode_diagnostics": {
+      "path": "MODE_DIAGNOSTICS.json",
+      "bytes": 12455,
+      "sha256": "8cdca1d6f706b8548eef284e6355b37f21806a2f40d7f281377920dd0e9ba4ea"
+    },
+    "adapter_source": {
+      "path": "asr_bucket_adapter.py",
+      "bytes": 6646,
+      "sha256": "66d613879c3b589ebc9c2ef4b032f0b6544fcb15dfeeeeb67bb808bfa61d1997"
+    },
+    "frontend_source": {
+      "path": "frontend.py",
+      "bytes": 3117,
+      "sha256": "af5fcd8b678605af5b95e3a7d2b3c853ffdee35f623b740c885c1f6e1a56a736"
+    },
+    "provenance": {
+      "path": "asr_rebuild_provenance.json",
+      "bytes": 1203,
+      "sha256": "200b1a68fd08c536067314842560b7dccd16d5ef6492bcee43acc1335fec70c7"
+    }
+  },
+  "status": "LOCAL_COMPILED_CANDIDATE_ON_HOLD_FOR_ASR_EQUIVALENCE",
+  "board_validated": false,
+  "hardware_actions_enabled": false,
+  "production_replacement_allowed": false,
+  "external_graph_runtime_required": true,
+  "drop_in_replacement_for_original_two_input_model": false,
+  "cpu_dependencies": [
+    "numpy",
+    "kaldi_native_fbank",
+    "sentencepiece"
+  ],
+  "candidate_defaults": {
+    "language": "zh",
+    "language_query": 3,
+    "use_itn": true,
+    "textnorm_query": 14,
+    "length_mode": "effective"
+  },
+  "replay": {
+    "samples": 11,
+    "normalized_text_equal": 10,
+    "normalization": "Remove listed punctuation and whitespace only; preserve words and numbers",
+    "failure": "official_zh.wav: original NPU 开放时间早上九点至下午五点; new CPU 开饭时间早上9点至下午5点。"
+  },
+  "equivalence": {
+    "new_onnx_vs_source_pytorch": "Passed two saved recordings",
+    "old_fixed100_model_equivalence": false,
+    "universal_equivalence_proven": false,
+    "cpu_replay_frontend": "torchaudio Kaldi; packaged runtime frontend uses kaldi_native_fbank",
+    "numeric_after_new_npu_quantization": "Not executed",
+    "cause_of_text_difference": "Not established"
+  },
+  "note": "Hold candidate for accuracy and target-runtime validation. The original ASR remains selected and unchanged."
+}

@@ -1,0 +1,5 @@
+{
+  "candidate_identity.json": "REPLACE_WITH_SHA256_OF_EXACT_FILE",
+  "trial_boot.json": "REPLACE_WITH_SHA256_OF_EXACT_FILE",
+  "libfm_uart_mmio.so": "REPLACE_WITH_SHA256_OF_EXACT_FILE"
+}

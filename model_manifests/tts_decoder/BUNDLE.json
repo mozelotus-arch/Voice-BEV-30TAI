@@ -1,0 +1,54 @@
+{
+  "schema": "voice-model-bundle-v1",
+  "name": "tts_decoder_icraft339_candidate",
+  "adapter": "piper-pinyin-hybrid-v1",
+  "compiler_sdk": "3.39.0",
+  "target": "ZG330",
+  "files": {
+    "network_json": {
+      "path": "network.json",
+      "bytes": 122247,
+      "sha256": "a8ffaf137fc0b73f0875ff047337620838aca18bd7d690e2a5fedbf4edd1c114"
+    },
+    "network_raw": {
+      "path": "network.raw",
+      "bytes": 5205604,
+      "sha256": "b3f336c53a35d0bc1199ace4ab4f97dc302e57b0a2fe00fbeddd2897d17ca19b"
+    },
+    "compile_receipt": {
+      "path": "COMPILATION.json",
+      "bytes": 6368,
+      "sha256": "dd9d0a3cfb360edad2fe7e1dcd8340eb8c5eccbd475d8247581a9daabbb7b22b"
+    },
+    "compiled_contract": {
+      "path": "COMPILED_CONTRACT.json",
+      "bytes": 1472,
+      "sha256": "ad2e73efcfd77f30b8c0daba52447abfeb1441ca22c9ffaf861f5af57966e908"
+    },
+    "encoder": {
+      "path": "encoder.onnx",
+      "bytes": 56552181,
+      "sha256": "cd148eaf1e86fdbbf938912d86668272d59d9358d80b4b2153cabcc7c074221f"
+    },
+    "config": {
+      "path": "voice.json",
+      "bytes": 2699,
+      "sha256": "5a8dda00084d3cdbfe4fcfefac5e78935f79af16452c35c70c337bdcef7cc755"
+    },
+    "interface": {
+      "path": "interface.json",
+      "bytes": 286,
+      "sha256": "00198f985af8cefa2cf7e005b4a537fc68bedf7fbbfef4129c9936a3743ab686"
+    },
+    "source_split_evidence": {
+      "path": "LIFT_2D_VALIDATION.json",
+      "bytes": 1679,
+      "sha256": "21232bd65d118102094d942f731def75b652aefb32ba199163985be79e564aba"
+    }
+  },
+  "status": "LOCAL_COMPILED_CANDIDATE_NOT_DEPLOYED",
+  "board_validated": false,
+  "acoustic_validated": false,
+  "hardware_actions_enabled": false,
+  "note": "New vehicle policy integration required; legacy household policy must not execute these labels"
+}

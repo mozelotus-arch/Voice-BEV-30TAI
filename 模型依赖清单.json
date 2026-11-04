@@ -1,0 +1,501 @@
+{
+  "schema": "FM-EXTERNAL-MODEL-DEPENDENCIES/1",
+  "note": "模型权重单独存放；BEV编译BUNDLE仅来源信息，当前运行身份以network.json/raw逐文件SHA为准。模型与SDK必须另行部署后才可上板。",
+  "models": [
+    {
+      "model": "asr100_rebuilt",
+      "role": "network_json",
+      "relative_path": "asr100_rebuilt/network.json",
+      "bytes": 9349864,
+      "sha256": "f9f0709813946e69b832aace065f7f7d6908ae01abf3288ac66c2fbb0bc7d141",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/network.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/network.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "network_raw",
+      "relative_path": "asr100_rebuilt/network.raw",
+      "bytes": 532090724,
+      "sha256": "d700ab0f9d9d75bd1d8236827f717c580bde2e23a7c21d9b3ee93b44c5d1e30b",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/network.raw",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/network.raw",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "compile_receipt",
+      "relative_path": "asr100_rebuilt/COMPILATION.json",
+      "bytes": 5047,
+      "sha256": "4c086347e9484cb5920435db02f9176cffc24e472f748b8d102e28efb6a2bcab",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/COMPILATION.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/COMPILATION.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "compiled_contract",
+      "relative_path": "asr100_rebuilt/COMPILED_CONTRACT.json",
+      "bytes": 2135,
+      "sha256": "e15c2236baa032392b55c46e42f9119931e2907a718be350c3a490b2e9cb4022",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/COMPILED_CONTRACT.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/COMPILED_CONTRACT.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "adapter_config",
+      "relative_path": "asr100_rebuilt/ADAPTER.json",
+      "bytes": 758,
+      "sha256": "eddcb11d48e940a52bcc9bf61bcfb9af5b2f528aed6e6b1312fe36c21a88a17d",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/ADAPTER.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/ADAPTER.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "query_embeddings",
+      "relative_path": "asr100_rebuilt/query_embeddings.npy",
+      "bytes": 35968,
+      "sha256": "83cf1fc5680fdf6d7edb411be5ce351cad4eca03b29a5bf5050aa19dfcc12267",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/query_embeddings.npy",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/query_embeddings.npy",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "position_encoding",
+      "relative_path": "asr100_rebuilt/position_encoding.npy",
+      "bytes": 233088,
+      "sha256": "74eb07875084d52ef9bfff1924150dcab709f78fcba4ce52e935357d66b6869b",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/position_encoding.npy",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/position_encoding.npy",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "cmvn",
+      "relative_path": "asr100_rebuilt/am.mvn",
+      "bytes": 11203,
+      "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/am.mvn",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/am.mvn",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "tokenizer",
+      "relative_path": "asr100_rebuilt/tokenizer.model",
+      "bytes": 377341,
+      "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/tokenizer.model",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/tokenizer.model",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "export_receipt",
+      "relative_path": "asr100_rebuilt/EXPORT.json",
+      "bytes": 675,
+      "sha256": "514533db4b7a803a8adee6bf251eaa4c74975aec2c30a36de7edd0acdd16d81c",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/EXPORT.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/EXPORT.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "source_split_evidence",
+      "relative_path": "asr100_rebuilt/SPLIT_VALIDATION.json",
+      "bytes": 1529,
+      "sha256": "fc99d29efc586dad8c67f5da1c99e2fef9359a41fd1bb73fc5646668e70e772b",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/SPLIT_VALIDATION.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/SPLIT_VALIDATION.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "onnx_validation",
+      "relative_path": "asr100_rebuilt/ONNX_VALIDATION.json",
+      "bytes": 663,
+      "sha256": "2e673160031df6cb6ea9494ced5d45989d6e7a914681be3341f37ef9b848bbd9",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/ONNX_VALIDATION.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/ONNX_VALIDATION.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "historical_replay",
+      "relative_path": "asr100_rebuilt/HISTORICAL_REPLAY.json",
+      "bytes": 5916,
+      "sha256": "ebdebda47ece6eb4f9622ef655e83f1c53dcafad6012d531c71d07c4c4b3f20a",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/HISTORICAL_REPLAY.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/HISTORICAL_REPLAY.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "mode_diagnostics",
+      "relative_path": "asr100_rebuilt/MODE_DIAGNOSTICS.json",
+      "bytes": 12455,
+      "sha256": "8cdca1d6f706b8548eef284e6355b37f21806a2f40d7f281377920dd0e9ba4ea",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/MODE_DIAGNOSTICS.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/MODE_DIAGNOSTICS.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "adapter_source",
+      "relative_path": "asr100_rebuilt/asr_bucket_adapter.py",
+      "bytes": 6646,
+      "sha256": "66d613879c3b589ebc9c2ef4b032f0b6544fcb15dfeeeeb67bb808bfa61d1997",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/asr_bucket_adapter.py",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/asr_bucket_adapter.py",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "frontend_source",
+      "relative_path": "asr100_rebuilt/frontend.py",
+      "bytes": 3117,
+      "sha256": "af5fcd8b678605af5b95e3a7d2b3c853ffdee35f623b740c885c1f6e1a56a736",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/frontend.py",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/frontend.py",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "asr100_rebuilt",
+      "role": "provenance",
+      "relative_path": "asr100_rebuilt/asr_rebuild_provenance.json",
+      "bytes": 1203,
+      "sha256": "200b1a68fd08c536067314842560b7dccd16d5ef6492bcee43acc1335fec70c7",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/asr100_rebuilt/asr_rebuild_provenance.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/asr100_rebuilt/asr_rebuild_provenance.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "network_json",
+      "relative_path": "vehicle_bert/network.json",
+      "bytes": 345680,
+      "sha256": "39913dd9769b74c4737bc7baa9e4f848b2efa163ed0a2d6df10d71cf1d6029cb",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/network.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/network.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "network_raw",
+      "relative_path": "vehicle_bert/network.raw",
+      "bytes": 6977128,
+      "sha256": "5355a249a252d0d5c8f45e622b327b25580d77833b3bc446f7da411735d828f5",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/network.raw",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/network.raw",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "compile_receipt",
+      "relative_path": "vehicle_bert/COMPILATION.json",
+      "bytes": 4991,
+      "sha256": "313e8f1502cc2900ece1527467353486a373a88ea0925579864d9d7ad3179451",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/COMPILATION.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/COMPILATION.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "compiled_contract",
+      "relative_path": "vehicle_bert/COMPILED_CONTRACT.json",
+      "bytes": 2127,
+      "sha256": "fc59bfadc9d0af2f279fae7fc9ba1fa36a68d2c36a98aaf2ccb7c599cc60facd",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/COMPILED_CONTRACT.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/COMPILED_CONTRACT.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "word_embeddings",
+      "relative_path": "vehicle_bert/word_embeddings.npy",
+      "bytes": 21635200,
+      "sha256": "cd95d2ee2145a86373c15a9b3d9a6e518448d6e9eaf5b9796797caf6935d6e35",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/word_embeddings.npy",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/word_embeddings.npy",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "position_embeddings",
+      "relative_path": "vehicle_bert/position_embeddings.npy",
+      "bytes": 524416,
+      "sha256": "90e6b8fd7660899f082ce713b791d616d7a97347f4708f6ef7c4892ebc85aef3",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/position_embeddings.npy",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/position_embeddings.npy",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "token_type_embeddings",
+      "relative_path": "vehicle_bert/token_type_embeddings.npy",
+      "bytes": 2176,
+      "sha256": "544fe209b8c4da97245fb9e7d4533c50a773cc8749df29eabbb20a030acee1c4",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/token_type_embeddings.npy",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/token_type_embeddings.npy",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "interface",
+      "relative_path": "vehicle_bert/interface.json",
+      "bytes": 1071,
+      "sha256": "568f3fbb3792be28146b1d2a7f68f70d34477daa8717e34d4c0669441ccba6e0",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/interface.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/interface.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "tokenizer",
+      "relative_path": "vehicle_bert/tokenizer.json",
+      "bytes": 439119,
+      "sha256": "e772e5fead29ba73cc246dc3f35ff14a844d9919a7dec1821360bdc4b6677352",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/tokenizer.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/tokenizer.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "command_contract",
+      "relative_path": "vehicle_bert/command_contract.json",
+      "bytes": 2081,
+      "sha256": "668233bf92e6b19fa39112b99ae8d84143b2a8f1c3976cfdbcef678fe72b3d11",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/command_contract.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/command_contract.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "evaluation",
+      "relative_path": "vehicle_bert/EVALUATION.json",
+      "bytes": 1680,
+      "sha256": "a891933e5182780a8160a5cd43302229f078a206fbfc0c0eb08e11424a01a0f6",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/EVALUATION.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/EVALUATION.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "vehicle_bert",
+      "role": "source_split_evidence",
+      "relative_path": "vehicle_bert/EXPORT_VALIDATION.json",
+      "bytes": 1624,
+      "sha256": "83c14182bad8614eb63ce5f8793857f043e3ba52bcda14b61725181883218d39",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/vehicle_bert/EXPORT_VALIDATION.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/vehicle_bert/EXPORT_VALIDATION.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "tts_decoder",
+      "role": "network_json",
+      "relative_path": "tts_decoder/network.json",
+      "bytes": 122247,
+      "sha256": "a8ffaf137fc0b73f0875ff047337620838aca18bd7d690e2a5fedbf4edd1c114",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/tts_decoder/network.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/tts_decoder/network.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "tts_decoder",
+      "role": "network_raw",
+      "relative_path": "tts_decoder/network.raw",
+      "bytes": 5205604,
+      "sha256": "b3f336c53a35d0bc1199ace4ab4f97dc302e57b0a2fe00fbeddd2897d17ca19b",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/tts_decoder/network.raw",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/tts_decoder/network.raw",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "tts_decoder",
+      "role": "compile_receipt",
+      "relative_path": "tts_decoder/COMPILATION.json",
+      "bytes": 6368,
+      "sha256": "dd9d0a3cfb360edad2fe7e1dcd8340eb8c5eccbd475d8247581a9daabbb7b22b",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/tts_decoder/COMPILATION.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/tts_decoder/COMPILATION.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "tts_decoder",
+      "role": "compiled_contract",
+      "relative_path": "tts_decoder/COMPILED_CONTRACT.json",
+      "bytes": 1472,
+      "sha256": "ad2e73efcfd77f30b8c0daba52447abfeb1441ca22c9ffaf861f5af57966e908",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/tts_decoder/COMPILED_CONTRACT.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/tts_decoder/COMPILED_CONTRACT.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "tts_decoder",
+      "role": "encoder",
+      "relative_path": "tts_decoder/encoder.onnx",
+      "bytes": 56552181,
+      "sha256": "cd148eaf1e86fdbbf938912d86668272d59d9358d80b4b2153cabcc7c074221f",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/tts_decoder/encoder.onnx",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/tts_decoder/encoder.onnx",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "tts_decoder",
+      "role": "config",
+      "relative_path": "tts_decoder/voice.json",
+      "bytes": 2699,
+      "sha256": "5a8dda00084d3cdbfe4fcfefac5e78935f79af16452c35c70c337bdcef7cc755",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/tts_decoder/voice.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/tts_decoder/voice.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "tts_decoder",
+      "role": "interface",
+      "relative_path": "tts_decoder/interface.json",
+      "bytes": 286,
+      "sha256": "00198f985af8cefa2cf7e005b4a537fc68bedf7fbbfef4129c9936a3743ab686",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/tts_decoder/interface.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/tts_decoder/interface.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "tts_decoder",
+      "role": "source_split_evidence",
+      "relative_path": "tts_decoder/LIFT_2D_VALIDATION.json",
+      "bytes": 1679,
+      "sha256": "21232bd65d118102094d942f731def75b652aefb32ba199163985be79e564aba",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/tts_decoder/LIFT_2D_VALIDATION.json",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/models/tts_decoder/LIFT_2D_VALIDATION.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "bev_extractor",
+      "role": "runtime_network.json",
+      "relative_path": "bev_extractor/network.json",
+      "bytes": 101359,
+      "sha256": "71c6b7e516597f7b68750853f71ee2ccf97ef35241ea9c2bb6aeb311d69acb0e",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/bev_extractor/network.json",
+      "source_project_relative_path": "extractor_fp16_validation_20261031/payload/network.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "bev_extractor",
+      "role": "runtime_network.raw",
+      "relative_path": "bev_extractor/network.raw",
+      "bytes": 37863564,
+      "sha256": "96138f1979de581df44710bb67e27a94af1fe6512c330d226e2ec3f1cb6d6f5b",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/bev_extractor/network.raw",
+      "source_project_relative_path": "extractor_fp16_validation_20261031/payload/network.raw",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "bev_decoder",
+      "role": "runtime_network.json",
+      "relative_path": "bev_decoder/network.json",
+      "bytes": 104400,
+      "sha256": "f17006c3ad87c86473775f358380a234de8a1c77ec8daf67f338885a7d73ac22",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/bev_decoder/network.json",
+      "source_project_relative_path": "decoder_rangefix_validation_20261031/payload/network.json",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    },
+    {
+      "model": "bev_decoder",
+      "role": "runtime_network.raw",
+      "relative_path": "bev_decoder/network.raw",
+      "bytes": 13407144,
+      "sha256": "95354998749efdcd100fd46f11ba9e26e55b2dacfb889c7f91134e70ff5a2b79",
+      "included_in_code_archive": false,
+      "restore_path": "application/assets/models/bev_decoder/network.raw",
+      "source_project_relative_path": "decoder_rangefix_validation_20261031/payload/network.raw",
+      "source_note": "项目既有模型制品；按文件大小和摘要恢复到restore_path。"
+    }
+  ],
+  "bundle_manifests": [
+    {
+      "model": "asr100_rebuilt",
+      "path": "model_manifests/asr100_rebuilt/BUNDLE.json",
+      "restore_path": "application/assets/models/asr100_rebuilt/BUNDLE.json",
+      "sha256": "c726c090ecda26aba564dba443bb6c8abbca8b5f97d84e5fec34fbe487840088",
+      "bytes": 4574,
+      "scope": "语音三包运行需原样恢复；BEV两包仅保存编译来源，实际运行只使用列出的network.json/raw。"
+    },
+    {
+      "model": "vehicle_bert",
+      "path": "model_manifests/vehicle_bert/BUNDLE.json",
+      "restore_path": "application/assets/models/vehicle_bert/BUNDLE.json",
+      "sha256": "cfd1f66126e86f858f08ad27b34f1b6c19608063b0d2c2d413c4429768b19b6a",
+      "bytes": 2597,
+      "scope": "语音三包运行需原样恢复；BEV两包仅保存编译来源，实际运行只使用列出的network.json/raw。"
+    },
+    {
+      "model": "tts_decoder",
+      "path": "model_manifests/tts_decoder/BUNDLE.json",
+      "restore_path": "application/assets/models/tts_decoder/BUNDLE.json",
+      "sha256": "acadac1aaa936dccd938459867db8f318a54966fd051b70590ac2284455f083a",
+      "bytes": 1837,
+      "scope": "语音三包运行需原样恢复；BEV两包仅保存编译来源，实际运行只使用列出的network.json/raw。"
+    },
+    {
+      "model": "bev_extractor",
+      "path": "model_manifests/bev_extractor/BUNDLE.json",
+      "restore_path": "application/assets/models/bev_extractor/BUNDLE.json",
+      "sha256": "73041ccbe2abe1ff3c9da9ef6b99571cdadb736f865df7eccb4240a2c65ae72a",
+      "bytes": 2928,
+      "scope": "语音三包运行需原样恢复；BEV两包仅保存编译来源，实际运行只使用列出的network.json/raw。"
+    },
+    {
+      "model": "bev_decoder",
+      "path": "model_manifests/bev_decoder/BUNDLE.json",
+      "restore_path": "application/assets/models/bev_decoder/BUNDLE.json",
+      "sha256": "e2dfa6c18938c9c9233ab77d132361a45eee9415f9c1846204c6efbd092320b2",
+      "bytes": 1528,
+      "scope": "语音三包运行需原样恢复；BEV两包仅保存编译来源，实际运行只使用列出的network.json/raw。"
+    }
+  ],
+  "restoration_root": "application/assets/models/",
+  "external_model_file_bytes": 685444628
+}

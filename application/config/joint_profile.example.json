@@ -1,0 +1,23 @@
+{
+  "bundle_root": "..",
+  "memory_limit_bytes": 2147483648,
+  "memory_domain": "SDK_PL_capacity_ceiling",
+  "lock_path": "/tmp/fm-npu-residence.lock",
+  "authorized_voice_validation": {
+    "path": "config/private/voice_candidate.json",
+    "sha256": "REPLACE_WITH_SHA256_OF_EXACT_FILE"
+  },
+  "models": {
+    "voice": {
+      "pin_resident_for_validation": true,
+      "budget_evidence_kind": "supervised_capacity_ceiling_not_measurement",
+      "budget": {
+        "resident_bytes": 1286655008,
+        "scratch_peak_bytes": 134217728,
+        "measured_max_call_s": 120,
+        "measured": false,
+        "load_timeout_s": 600
+      }
+    }
+  }
+}

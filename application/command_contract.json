@@ -1,0 +1,26 @@
+{
+  "schema": "fm-vehicle-voice-contract-v1",
+  "status": "user_confirmed_semantics_20261030",
+  "user_confirmation": "采用这套最小指令集和语义",
+  "wake_phrase": "小雅小雅",
+  "wake_implementation": "CPU exact text gate after ASR; no separate trained wake-word model in this candidate",
+  "intents": {
+    "move": {"forms": ["前进<距离><单位>", "后退<距离><单位>"], "slots": ["direction", "quantity", "unit"], "units": ["厘米", "米"]},
+    "turn": {"forms": ["左转<角度>度", "右转<角度>度"], "slots": ["direction", "quantity", "unit"], "units": ["度"]},
+    "auto_start": {"forms": ["开始自动避障"], "behavior": "request automatic obstacle avoidance; perception/control implementation remains separate; speed and avoidance strategy are not configured here"},
+    "stop": {"forms": ["停车"], "behavior": "stop movement, exit automatic avoidance, clear queued/incomplete actions"},
+    "unknown": {"behavior": "no action"}
+  },
+  "missing_parameter": "ask for the missing distance or angle; no movement",
+  "stop_wake_gate": "while motion is active, exact 停车 does not require a new wake phrase",
+  "interaction_stop": "retain existing stop-all generation cancellation, microphone/playback shutdown and explicit resume",
+  "resume": "resumes interaction only; never resumes old vehicle commands",
+  "lateral_motion": "unsupported; left/right are turns in degrees",
+  "synonym_expansion": "none approved beyond the literal forms above",
+  "unconfirmed_or_ambiguous_text": "reject; no action, including compound, negated, hypothetical or unsupported commands",
+  "quantity_representation": "positive finite decimal; normalized SI value is data, not permission to execute",
+  "execution_limits": {"distance_range_m": null, "turn_range_deg": null, "speed": null, "completion_tolerance": null},
+  "execution_limits_status": "requires later feedback/controller and board validation; never invent duration from distance",
+  "speaker_verification": "not enabled; no threshold selected",
+  "hardware_execution_in_this_workspace": false
+}

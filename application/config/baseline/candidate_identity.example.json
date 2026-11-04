@@ -1,0 +1,5 @@
+{
+  "boot_sha256": "REPLACE_VERIFIED_BOOT_SHA256",
+  "uart_abi": "0x55415203",
+  "required_test_mode": "uart_only_pjtag_inactive"
+}

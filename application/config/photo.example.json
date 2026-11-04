@@ -1,0 +1,16 @@
+{
+  "capture_root": "/ABSOLUTE/WRITABLE/captures",
+  "output_root": "/ABSOLUTE/WRITABLE/bev",
+  "capture": {
+    "schema": "FM-RECORDING-CAPTURE-CONFIG/1",
+    "expected_boot_id": "REPLACE_CURRENT_BOOT_UUID",
+    "mapping": {
+      "path": "config/camera_mapping_frozen.json",
+      "sha256": "fb5388044bf8a274bf9f7958761ac1f89435a97a37ef75d148b937c568420c6b"
+    },
+    "output_root": "/ABSOLUTE/WRITABLE/captures",
+    "ffmpeg": "/usr/bin/ffmpeg",
+    "camera_lock": "/tmp/fm-camera-capture.lock",
+    "strategy": "fast"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "encoder_ground_demo",
+  "evidence_id": "REPLACE_WITH_VERIFIED_FEEDBACK_UNIT_EVIDENCE",
+  "linear_m_per_count_s": 0.001,
+  "yaw_rad_per_count_s": 0.001,
+  "max_distance_m": 0.2,
+  "max_angle_deg": 90,
+  "distance_tolerance_m": 0.005,
+  "angle_tolerance_deg": 1,
+  "linear_command_mm_s": 100,
+  "yaw_command_mrad_s": 400,
+  "timeout_s": 5,
+  "no_progress_s": 2,
+  "max_feedback_linear_count_s": 500,
+  "max_feedback_yaw_count_s": 2000,
+  "feedback_timeout_s": 0.2
+}

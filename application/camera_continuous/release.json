@@ -1,0 +1,14 @@
+{
+  "version": "continuous_v1-release",
+  "files": {
+    "libuvc_probe.so": "364ab82aef2f35ba1128eb5518550651de07b7ebb2dbaa6901e33f6e7a126801",
+    "ring_stream.c": "69c1a6e71b396175273c6357649b617671f136b69cd2b2a171b409a86913f249",
+    "ring_stream": "31d84d3d5f499b8313d7ad2946bfab5ab1eb5b8a914a5909d8193d22f1c02754",
+    "recording_capture.py": "7f13b267c00ab5d078adb16f84a9bc9716ad3df0f1ab024e18c5a061a742171d",
+    "continuous_client.py": "faa51b5fa5f8f6e1e2a5a056fd4d8ac4f429ad191bac7457f1af1d8c4defd0f1",
+    "LIBUVC-LICENSE.txt": "57a7ba48475cb7f0aaddfb79ef32e742a19901908f0287b6827da336477b212e",
+    "continuous_daemon.py": "179ee8db9c05e2d3c5951ede2fcb5c6afe2a793ad096a83200d6bc44c53a9eaa",
+    "stream_capture.py": "71669ae6c099620685a6995489df9402af8eb5dfa1af4995820afc308e99de49",
+    "source_manifest.json": "d9f27a1e79cfe20e4e8979cebd9c17ce494999b1dbfc7bccc7e7459eca54e5c9"
+  }
+}

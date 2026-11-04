@@ -1,0 +1,7 @@
+{
+  "active_candidate_boot_id": "REPLACE_CURRENT_BOOT_UUID",
+  "candidate_boot_sha256": "REPLACE_VERIFIED_BOOT_SHA256",
+  "stage": "uart_mmio",
+  "idle_baseline_passed": false,
+  "pjtag_inactive_confirmed": false
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "FM-BEV-RESIDENT-PACKAGE/1",
+  "version": "voice-bev-resident-20261104",
+  "files": {
+    "__init__.py": "4cb8dd87000304ea11c86e9cc190881f1e662aadf7c3f0a3b6499b0d2404bc13",
+    "cpu_part2.py": "eb32cb7596b6602e63cb711d4e30b5df6605c61ad5fc6cfd32c63f89353da61e",
+    "host_memory.py": "949715837aec927ce6d34cf9d2fd90efb524dd6aa5a51a69e837a243c0dabf18",
+    "owner_bev.py": "8445f367e2021779677855e224ef5ab93fc9c0df5832ad47317848f6f2b7f584",
+    "projection.py": "7ccf18626fe5c511c270d84dd16a9923a527255cc9858c61cac2e5c7731eff71",
+    "render_bev.py": "141fa7d43bb32cdce3a2e1aebe389525d038c12776c04500f96816ba9348bf4e"
+  },
+  "scope": "CPU投影与共享DeviceOwner常驻BEV模块。"
+}

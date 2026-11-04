@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="control-token" content="CONTROL_TOKEN">
+  <meta name="theme-color" content="#16675c">
+  <title>小雅 · 设备工作台</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/vehicle.css">
+  <script src="/app.js" defer></script>
+  <script src="/vehicle.js" defer></script>
+  <script src="/local_voice.js" defer></script>
+  <script src="/workspace_ui.js" defer></script>
+  <!-- BOARD_BEV_SCRIPT -->
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="mark">雅</span><span>小雅<span class="brand-sub">语音 · 对话 · 小车</span></span></a>
+    <div class="top-actions"><span id="model-badge" class="badge">读取模型状态</span><button id="stop-all" class="danger">停止全部交互</button></div>
+  </header>
+  <nav class="workspace-nav" aria-label="功能导航"><a href="#home">功能主页</a><a href="#voice">本地语音</a><a href="#bluetooth">蓝牙文字与语音</a><a href="#chat">大模型聊天</a><a href="#vehicle">小车遥控</a><a href="#vision">视觉与鸟瞰图</a><a href="#settings">连接设置</a></nav>
+  <div class="shared-connection" role="status"><span id="shared-bt-state">正在读取共享蓝牙连接…</span><button data-board="connect">连接蓝牙</button><button data-board="disconnect">断开蓝牙</button><span>所有页面共用这个连接；本地语音无需蓝牙。</span></div>
+  <main class="layout">
+    <section id="workspace-home" data-page="home" class="home-page">
+      <div class="home-hero"><p class="eyebrow">XIAOYA / DEVICE WORKSPACE</p><h1>从一个入口，了解每项能力。</h1><p>选择功能查看操作、实时状态和执行记录。连接、加载、识别、执行分别确认。</p><div class="status-strip"><span id="home-bt">蓝牙：读取中</span><span id="home-voice">语音：读取中</span><span id="home-car">小车：读取中</span></div></div>
+      <div class="feature-grid">
+        <a class="feature-card" href="#voice"><span class="feature-icon">声</span><span class="feature-number">01 / VOICE</span><h2>本地语音交互</h2><p>开始或停止板端监听，查看支持指令、识别结果和播报回执。</p><span class="feature-link">进入语音工作室 →</span></a>
+        <a class="feature-card" href="#bluetooth"><span class="feature-icon">连</span><span class="feature-number">02 / BLUETOOTH</span><h2>蓝牙加载与文字</h2><p>连接蓝牙、单独加载板端模型、发送文字指令。语音监听在语音页控制。</p><span class="feature-link">查看连接与加载 →</span></a>
+        <a class="feature-card" href="#chat"><span class="feature-icon">聊</span><span class="feature-number">03 / ASSISTANT</span><h2>大模型聊天</h2><p>与小雅对话，查询支持的指令与设备状态；按需由板卡朗读回复。</p><span class="feature-link">打开对话 →</span></a>
+        <a class="feature-card" href="#vehicle"><span class="feature-icon">行</span><span class="feature-number">04 / CONTROL</span><h2>小车遥控</h2><p>先看为什么能动或不能动，再按住方向操纵。测速、电压、停车回读清晰可见。</p><span class="feature-link">进入驾驶面板 →</span></a>
+        <a class="feature-card" href="#vision"><span class="feature-icon">视</span><span class="feature-number">05 / VISION</span><h2>视觉与鸟瞰图</h2><p>查看板端任务阶段、图像来源与返回结果；摄像头诊断由板端继续处理。</p><span class="feature-link">查看处理状态 →</span></a>
+        <a class="feature-card" href="#settings"><span class="feature-icon">设</span><span class="feature-number">06 / SETTINGS</span><h2>连接与模型设置</h2><p>管理语言模型接口。密钥留在本机服务内存，设备连接由你发起。</p><span class="feature-link">管理连接 →</span></a>
+      </div>
+    </section>
+    <div id="page-heading" class="page-heading"><a href="#home">← 功能主页</a><h1 id="page-name"></h1><p id="page-description"></p></div>
+    <section data-page="chat" class="chat-card" aria-labelledby="chat-title">
+      <div class="card-heading"><div><p class="eyebrow">一起聊聊，再付诸行动</p><h1 id="chat-title">你好，我是小雅。</h1></div><button id="new-chat" class="quiet">新建对话</button></div>
+      <p id="chat-state" class="status-line" role="status">正在读取本机状态…</p>
+      <div id="demo-banner" class="notice" hidden>离线演示：仅验证界面和流程，没有调用语言模型。</div>
+      <div id="messages" class="messages" aria-label="聊天记录">
+        <div class="welcome"><span class="welcome-mark">雅</span><h2>让对话更进一步</h2><p>先在连接设置中接入你的模型。聊天可以独立使用；需要朗读时，再连接板卡。</p><div class="suggestions"><button data-prompt="用一个例子解释云边协同。">聊聊云边协同</button><button data-prompt="帮我梳理今天想完成的事。">一起整理思路</button></div><p class="muted">试着问：你支持哪些指令？现在小车为什么不能动？</p></div>
+      </div>
+      <div id="error" class="error" role="alert" hidden></div>
+      <div id="stopped-banner" class="notice" hidden><span>交互已停止。恢复聊天不会开启板端麦克风。</span><button id="resume-chat">恢复聊天</button></div>
+      <form id="composer" class="composer">
+        <label class="sr-only" for="message">发送给小雅</label>
+        <textarea id="message" rows="3" maxlength="8000" placeholder="和小雅聊点什么…" required></textarea>
+        <div class="composer-footer"><label class="check"><input id="auto-read" type="checkbox">回复后由板卡朗读</label><div class="send-area"><span id="char-count">0 / 4000</span><button id="send" class="primary" type="submit">发送 ↑</button></div></div>
+      </form>
+      <p class="footnote">Enter 发送 · Shift + Enter 换行 · 最近 12 轮用于上下文 · 记录仅保存在本机服务内存</p>
+    </section>
+    <aside class="sidebar">
+      <section data-page="voice" class="side-card" aria-labelledby="local-voice-title">
+        <div class="section-heading"><h2 id="local-voice-title">本地语音</h2></div>
+        <p class="muted">先在<a href="#bluetooth">蓝牙页面加载模型</a>，再在这里开启监听。收音、识别、理解与播报均在板端完成。</p>
+        <div class="button-grid"><button id="start-bt-voice" class="primary">开始监听（蓝牙）</button><button id="local-voice-stop" class="danger">停止监听</button></div>
+        <p id="voice-mode-switch-status" class="footnote" role="status">开始监听只开启已加载模型的麦克风；停止监听自动选择当前可用控制通路。</p>
+        <p id="local-voice-state" role="status">正在读取状态…</p>
+        <p id="voice-operation-result" class="board-feedback" role="status"></p>
+        <details><summary>网线备用入口</summary><p class="footnote">使用原来的网线一键启动流程，包含必要的模型加载。停止时仍使用上方“停止监听”。</p><button id="local-voice-start" disabled>网线一键启动（含加载）</button></details>
+        <p id="local-voice-result" class="board-feedback" role="status"></p>
+      </section>
+      <section data-page="settings" class="side-card" aria-labelledby="model-title">
+        <div class="section-heading"><span class="step">01</span><h2 id="model-title">聊天模型</h2></div>
+        <p id="model-description" class="muted">接入你选择的模型服务。</p>
+        <details id="settings-details" open>
+          <summary>连接设置</summary>
+          <form id="settings-form">
+            <label for="provider-mode">运行方式</label><select id="provider-mode"><option value="api">连接模型 API</option><option value="demo">离线流程演示</option></select>
+            <label for="base-url">服务地址</label><input id="base-url" type="url" placeholder="https://服务地址/v1" autocomplete="off">
+            <label for="model">模型名称</label><input id="model" type="text" maxlength="160" placeholder="服务商提供的模型 ID" autocomplete="off">
+            <label for="api-key">API 密钥</label><input id="api-key" type="password" autocomplete="off" placeholder="留空保留当前密钥" maxlength="4096">
+            <p id="key-state" class="footnote">密钥仅在本机服务内存中使用。</p>
+            <label class="check"><input id="clear-key" type="checkbox">清除当前密钥</label>
+            <button id="save-settings" class="primary full" type="submit">保存设置</button>
+          </form>
+        </details>
+        <p class="footnote">兼容 Chat Completions 接口。密钥不写入网页存储或配置文件，服务重启后需重新填写。</p>
+      </section>
+      <section data-page="bluetooth" class="side-card" aria-labelledby="board-title">
+        <div class="section-heading"><span class="step">02</span><h2 id="board-title">蓝牙加载与文字交流</h2><span id="board-badge" class="badge small">读取中</span></div>
+        <p id="board-description" class="muted">蓝牙传递文字、模型加载和麦克风控制指令；识别、理解与播报在板端运行。</p>
+        <dl class="board-facts"><div><dt>蓝牙</dt><dd id="bt-state">—</dd></div><div><dt>模型</dt><dd id="voice-state">—</dd></div><div><dt>麦克风</dt><dd id="mic-state">—</dd></div><div><dt>播放</dt><dd id="player-state">—</dd></div></dl>
+        <div class="mode-actions"><button id="load-bt-models" class="primary">加载板端模型（蓝牙）</button><p id="load-model-status" role="status">只加载模型，不开启监听。已加载时直接复用，保留当前监听状态。</p></div>
+        <div class="load-panel"><div class="load-heading"><strong id="load-label">等待开始</strong><span id="load-elapsed"></span></div><progress id="load-progress" max="7" value="0" aria-label="模型加载阶段"></progress><p id="load-explanation" class="footnote">进度按板端完成的阶段计算，不代表时间百分比。</p><ol id="load-stages" class="stage-list"></ol></div>
+        <div class="mode-actions"><button id="switch-text">启用蓝牙文字模式</button><a href="#voice">前往语音页开始 / 停止监听 →</a><p id="mode-switch-status" role="status">先加载模型，再选择文字交流或语音监听；切换共用已加载模型。</p></div>
+        <div class="button-grid"><button data-board="connect">连接蓝牙</button><button data-board="disconnect">断开蓝牙</button></div>
+        <details><summary>分步操作与连接诊断</summary><div class="button-grid"><button data-board="resume">解除语音停止</button></div>
+        <div class="segmented" role="group" aria-label="板端模式"><button data-board="mode" data-mode="text">文字交流模式</button></div>
+        <p class="footnote">蓝牙文字交流与遥控共用一个连接。本地语音和文字朗读使用同一套模型，切换前先停止当前模式。</p>
+        </details><p id="board-feedback" class="board-feedback">尚无板端反馈。</p>
+      </section>
+      <section data-page="chat" class="side-card capabilities"><div class="section-heading"><span class="step">03</span><h2>大模型可调用动作</h2></div><p id="capability-count">正在读取实际工具</p><p class="muted">可用工具随服务显示。明确操作会返回接口回执；车辆运动范围以当前板端能力为准，受理和完成分开显示。</p><ul id="agent-tool-list"></ul></section>
+      <p data-page="settings" class="side-note">本页仅运行在这台电脑上。手机 App 将复用聊天与动作接口，蓝牙接入另行适配。</p>
+    </aside>
+    <section data-page="vehicle" id="vehicle-panel" class="vehicle-card" aria-labelledby="vehicle-title">
+      <div class="vehicle-intro">
+        <p class="eyebrow">R3 四轮差速 · 按住操纵</p><h2 id="vehicle-title">小车控制</h2>
+        <span id="vehicle-mode" class="badge">等待网关</span>
+        <p id="vehicle-message" class="muted" role="status">正在读取本机控制状态…</p>
+        <div id="vehicle-blockers" class="notice" role="status">正在检查运动条件…</div><ol class="howto"><li>确认当前运动范围安全并连接蓝牙。</li><li>下方检查全部通过后，鼠标或手指<strong>持续按住</strong>方向。</li><li>松开立即请求停车；切换页面也会停止。点击一下只会产生很短的按住动作。</li></ol><label for="vehicle-speed">当前控制档</label>
+        <select id="vehicle-speed"><option value="bench">100 mm/s · 800 mrad/s</option></select>
+        <div class="vehicle-connect-row"><button id="vehicle-connect" disabled>连接网关蓝牙</button><button id="vehicle-disconnect" disabled>断开</button></div>
+        <p class="footnote">按当前授权场景操作。按住方向才申请控制，松手即停止；再次按下才能重新申请。</p>
+      </div>
+      <div class="drive-area">
+        <p id="drive-action" class="drive-label" role="status">未启用</p>
+        <div class="direction-pad" role="group" aria-label="按住方向按钮操纵；松开停止">
+          <button data-drive="front_left" aria-label="按住前左弧线" disabled><b>↖</b><span>前左弧线</span></button>
+          <button data-drive="forward" aria-label="按住前进" disabled><b>↑</b><span>前进</span></button>
+          <button data-drive="front_right" aria-label="按住前右弧线" disabled><b>↗</b><span>前右弧线</span></button>
+          <button data-drive="rotate_left" aria-label="按住原地左转" disabled><b>↶</b><span>原地左转</span></button>
+          <button id="vehicle-stop" class="vehicle-stop" aria-label="停止小车"><b>■</b><span>停止小车</span></button>
+          <button data-drive="rotate_right" aria-label="按住原地右转" disabled><b>↷</b><span>原地右转</span></button>
+          <button data-drive="back_left" aria-label="按住后左弧线" disabled><b>↙</b><span>后左弧线</span></button>
+          <button data-drive="backward" aria-label="按住后退" disabled><b>↓</b><span>后退</span></button>
+          <button data-drive="back_right" aria-label="按住后右弧线" disabled><b>↘</b><span>后右弧线</span></button>
+        </div>
+        <p class="footnote">左右箭头：车身原地旋转；四个斜箭头：一边前进/后退一边转弯，不是横移。</p>
+      </div>
+      <div class="vehicle-telemetry">
+        <div class="telemetry-heading"><h3>实时反馈</h3><span id="vehicle-freshness">尚未读取</span></div>
+        <dl class="telemetry-grid">
+          <div><dt>蓝牙 / 网关</dt><dd id="vehicle-connection">—</dd></div>
+          <div><dt>CAN 状态</dt><dd id="vehicle-can">—</dd></div>
+          <div><dt>实际线速度</dt><dd><span id="vehicle-vx">—</span><small>mm/s</small></dd></div>
+          <div><dt>实际角速度</dt><dd><span id="vehicle-wz">—</span><small>mrad/s</small></dd></div>
+          <div><dt>电池电压</dt><dd><span id="vehicle-battery">—</span><small>V</small></dd></div>
+          <div><dt>停止回读</dt><dd id="vehicle-standstill">未确认</dd></div>
+        </dl>
+        <p id="vehicle-stop-status" class="stop-status">停止请求和静止反馈会分别显示。</p>
+        <p id="vehicle-error" class="error" hidden role="alert"></p>
+        <p class="footnote">只显示收到的测速和电压；不把“已提交零速”当作实车已停止，也不推算电池百分比。</p>
+      </div>
+    </section>
+    <section data-page="voice" class="side-card detail-wide"><h2>可以怎么说？</h2><p><strong>唤醒词：小雅小雅。</strong>板端回应“我在”后，直接说下方指令。唤醒词不属于指令格式，不需要每次重复。</p><p>指令示例：“前进二厘米”“左转十度”“停车”。可以连续发指令，直到停止语音。正常动作保持静默，异常简短说明原因；识别原文、控制回执和动作终态显示在页面。距离和角度须带单位，范围以当前板端配置为准。</p><div id="voice-command-list" class="command-list"></div><a href="#bluetooth">不方便说话？前往蓝牙文字输入 →</a></section>
+    <section data-page="voice" class="side-card"><h2>声纹录入与身份验证</h2><span class="badge">尚未接入</span><p>当前服务没有启用声纹模型、录入接口或验证阈值。现在的语音指令不按说话人身份授权。</p><button disabled>录入声纹 · 等待模块接入</button></section>
+    <section data-page="voice bluetooth" class="side-card"><h2>模式与连接关系</h2><p>蓝牙页负责连接、加载模型与文字交流；语音页负责开始和停止监听。加载完成不会自动开启麦克风，停止监听后模型继续驻留。</p><p>蓝牙和网线均可传递板端语音控制指令，收音与识别在板上进行。文字交流与麦克风监听共用模型和音箱，切换时结束旧模式。</p><p>“解除语音停止”只解除停止状态，不会重启板卡、加载模型或开启麦克风。大模型纯文字聊天独立可用。</p></section>
+    <section data-page="bluetooth" class="side-card detail-wide"><h2>文字指令输入</h2><p>先加载模型并启用文字模式，再直接输入“前进二厘米”“左转十度”等完整指令。文字输入不需要“小雅小雅”前缀。板端 BERT 解析后显示控制回执；目标范围以当前板端能力为准。</p><form id="board-text-form"><label for="board-text">发送到板端模型</label><textarea id="board-text" maxlength="120" placeholder="前进二厘米" required></textarea><button id="board-text-send" class="primary">发送到板端解析</button></form><p id="board-text-result" class="board-feedback" role="status"></p><div id="bt-load-detail" class="board-feedback"></div></section>
+    <section data-page="voice bluetooth" class="side-card detail-wide"><div class="section-heading"><h2>语音事件记录</h2><button id="export-voice-log">导出本页记录</button></div><p class="footnote">保留本页面打开以来收到的状态变化。未观察到的历史阶段不会补写。</p><ol id="voice-timeline" class="event-list"></ol></section>
+    <section data-page="vehicle" class="side-card detail-wide"><h2>控制检查与操作记录</h2><div id="vehicle-checklist" class="checklist"></div><ol id="vehicle-timeline" class="event-list"></ol></section>
+    <section data-page="vision" class="side-card detail-wide"><h2>视觉任务</h2><p>摄像头采集、板端推理和结果回传分别验证。当前语音测试期间，不与视觉任务争用模型运行资源。</p></section>
+    <!-- BOARD_BEV_PANEL -->
+  </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "schema": "FM-ICRAFT339-PROJECT-ALLOCATOR-OVERRIDE/1",
+  "vendor_original": false,
+  "original": {
+    "bytes": 561528,
+    "sha256": "d55e48873da61314da712c584e62f8257f63794ecca481e64868361ee5fc7178",
+    "runtime_relative_path": "usr/lib/aarch64-linux-gnu/libaxizg330aiu.so"
+  },
+  "candidate": {
+    "bytes": 561528,
+    "sha256": "b46b42bc43a724c73b0bd47009ef80708f7508050244e542d3064d79acabde90",
+    "runtime_relative_path": "usr/lib/aarch64-linux-gnu/libaxizg330aiu.so"
+  },
+  "change": {
+    "function": "AXIZG330AIUDeviceNode::AXIZG330AIUDeviceNode()",
+    "virtual_address": "0x29244",
+    "file_offset": 168516,
+    "old_instruction": "b2744fe2 mov x2, #0xfffff000",
+    "new_instruction": "b2744be2 mov x2, #0x7ffff000",
+    "changed_byte_offsets": [
+      168517
+    ]
+  },
+  "allocator_start": 4096,
+  "allocator_bytes": 2147479552,
+  "exclusive_end": 2147483648,
+  "scope": "将SDK分配器范围限制为[4096,2147483648)，保持BOOT和寄存器映射不变。仅生成新的隔离运行目录。"
+}

@@ -1,0 +1,42 @@
+{
+  "version": 7,
+  "scope": "ground_user_command_demo",
+  "lifetime": "until_explicit_stop",
+  "session_id": "REPLACE_AFTER_OPERATOR_CONFIRMATION",
+  "user_controlled_session": false,
+  "explicit_no_wallclock_expiry": false,
+  "issued_unix_s": 0,
+  "boot_id": "REPLACE_AFTER_OPERATOR_CONFIRMATION",
+  "boot_sha256": "REPLACE_AFTER_OPERATOR_CONFIRMATION",
+  "profile": "r3_four_wheel_diff_gmr",
+  "operator_authorized_start": false,
+  "ground_motion_authorized": false,
+  "wheels_raised_and_secured": false,
+  "charging_disconnected": false,
+  "wiring_verified": false,
+  "can_readback_verified": false,
+  "chassis_identity_verified": false,
+  "user_initiated_commands_only": false,
+  "metric_motion_authorized": false,
+  "agent_motion_authorized": false,
+  "autonomous_motion_authorized": false,
+  "ground_distance_calibrated": false,
+  "user_command_channels": [
+    "voice",
+    "bluetooth_text",
+    "llm_current_user_request",
+    "manual_hold"
+  ],
+  "manual_limits": {
+    "linear_mm_s": 100,
+    "yaw_mrad_s": 400
+  },
+  "request_limits": {
+    "max_distance_m": 0.2,
+    "max_angle_deg": 90,
+    "timeout_s": 5
+  },
+  "authorization_reference": "REPLACE_AFTER_OPERATOR_CONFIRMATION",
+  "current_can_evidence": "REPLACE_WITH_CURRENT_EVIDENCE",
+  "encoder_unit_evidence": "REPLACE_WITH_CURRENT_EVIDENCE"
+}

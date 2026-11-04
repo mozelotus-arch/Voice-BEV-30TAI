@@ -1,0 +1,49 @@
+{
+  "schema": "fm-voice-bev-resident-v1",
+  "input_storage": "sdk_host_input",
+  "audit_decoder_input": false,
+  "adapter_manifest": {
+    "path": "fm_autonomy/resident_bev/MANIFEST.json",
+    "sha256": "c7eacbf172988a62efafd111ce8f548550b9e946207776ac0f973275c0c0466f"
+  },
+  "lut": {
+    "path": "assets/geometry/fastbev_vehicle_pro_lut_candidate.bin",
+    "sha256": "4d84bb0b918819263a39397881481d83118f84d2d9ecd7bbab1e5e661572d2b8"
+  },
+  "postprocess": {
+    "path": "/ABSOLUTE/ENGINEERING/build/native/postprocess",
+    "sha256": "REPLACE_WITH_SHA256_OF_EXACT_FILE"
+  },
+  "models": {
+    "extractor": {
+      "network_json": {
+        "path": "assets/models/bev_extractor/network.json",
+        "sha256": "71c6b7e516597f7b68750853f71ee2ccf97ef35241ea9c2bb6aeb311d69acb0e"
+      },
+      "network_raw": {
+        "path": "assets/models/bev_extractor/network.raw",
+        "sha256": "96138f1979de581df44710bb67e27a94af1fe6512c330d226e2ec3f1cb6d6f5b"
+      }
+    },
+    "decoder": {
+      "network_json": {
+        "path": "assets/models/bev_decoder/network.json",
+        "sha256": "f17006c3ad87c86473775f358380a234de8a1c77ec8daf67f338885a7d73ac22"
+      },
+      "network_raw": {
+        "path": "assets/models/bev_decoder/network.raw",
+        "sha256": "95354998749efdcd100fd46f11ba9e26e55b2dacfb889c7f91134e70ff5a2b79"
+      }
+    }
+  },
+  "capture_root": "/ABSOLUTE/WRITABLE/captures",
+  "output_root": "/ABSOLUTE/WRITABLE/bev",
+  "capacity": {
+    "pl_limit_bytes": 2147483648,
+    "expected_voice_pl_bytes": 637509952,
+    "expected_bev_pl_bytes": 649145056,
+    "ps_min_available_kib": 196608,
+    "ps_min_non_cma_available_kib": 196608
+  },
+  "joint_hardware_accepted": false
+}

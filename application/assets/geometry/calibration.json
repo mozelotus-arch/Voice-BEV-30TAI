@@ -1,0 +1,296 @@
+{
+  "schema": "provisional_shared_intrinsics_v1",
+  "ready_for_pro_runtime": false,
+  "camera_axes": "x_right_y_down_z_forward",
+  "vehicle_axes": "x_forward_y_left_z_up",
+  "translation_unit": "metre",
+  "source_session_sha256": "dc43396036d879219c0c6e39197f94babc9f94cd57c2d8e9989718a1ef94a61f",
+  "warnings": [
+    "One provisional intrinsic fit is shared across four cameras by user request.",
+    "Extrinsics use manual approximate paper centers in raw 320x240 images.",
+    "P09/P10 are held out from each pose fit; checks share the same image and intrinsics.",
+    "All four extrinsics are solved provisionally, but Pro input preprocessing, model-slot mapping and real-vehicle LUT are not completed.",
+    "Keep image resolution/focus and camera mounts fixed; errors outside the surveyed region are unvalidated."
+  ],
+  "cameras": {
+    "front": {
+      "capture_size": [
+        320,
+        240
+      ],
+      "distortion_model": "pinhole",
+      "distortion_order": [
+        "k1",
+        "k2",
+        "p1",
+        "p2",
+        "k3"
+      ],
+      "K": [
+        [
+          271.532931952742,
+          0.0,
+          142.17009476445867
+        ],
+        [
+          0.0,
+          273.5341494386374,
+          144.44677756643068
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.5720000216397308,
+        0.5171697174659391,
+        -0.011457488201156987,
+        0.0017807496548953472,
+        -0.2602154488203802
+      ],
+      "usb_port": "1-1.4.3",
+      "intrinsics_source": "front",
+      "shared_approximation": false,
+      "T_vehicle_from_camera": [
+        [
+          0.08962432733870654,
+          0.017312460121995867,
+          0.9958251647119631,
+          0.18213160009289217
+        ],
+        [
+          -0.9958548233730457,
+          -0.014015551307152633,
+          0.08987065753735442,
+          -0.0002584049212387127
+        ],
+        [
+          0.015512920863727138,
+          -0.9997518907439389,
+          0.015984562558758325,
+          0.2528427853797281
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "extrinsics_status": "provisional_manual_ground_points",
+      "intrinsics_provenance_note": "front is a historical source session label, not a verified current physical camera identity"
+    },
+    "right": {
+      "capture_size": [
+        320,
+        240
+      ],
+      "distortion_model": "pinhole",
+      "distortion_order": [
+        "k1",
+        "k2",
+        "p1",
+        "p2",
+        "k3"
+      ],
+      "K": [
+        [
+          271.532931952742,
+          0.0,
+          142.17009476445867
+        ],
+        [
+          0.0,
+          273.5341494386374,
+          144.44677756643068
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.5720000216397308,
+        0.5171697174659391,
+        -0.011457488201156987,
+        0.0017807496548953472,
+        -0.2602154488203802
+      ],
+      "usb_port": "1-1.4.4",
+      "intrinsics_source": "front",
+      "shared_approximation": true,
+      "T_vehicle_from_camera": [
+        [
+          -0.9947728113775175,
+          -0.09456733094700917,
+          -0.038523676636956744,
+          -0.011630461737856283
+        ],
+        [
+          0.042420750046416385,
+          -0.0395504327664296,
+          -0.9983167048755061,
+          -0.11664506330253276
+        ],
+        [
+          0.092884518137144,
+          -0.9947325184116318,
+          0.043355312302919224,
+          0.23996526485016156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "extrinsics_status": "provisional_manual_ground_points",
+      "intrinsics_provenance_note": "front is a historical source session label, not a verified current physical camera identity"
+    },
+    "back": {
+      "capture_size": [
+        320,
+        240
+      ],
+      "distortion_model": "pinhole",
+      "distortion_order": [
+        "k1",
+        "k2",
+        "p1",
+        "p2",
+        "k3"
+      ],
+      "K": [
+        [
+          271.532931952742,
+          0.0,
+          142.17009476445867
+        ],
+        [
+          0.0,
+          273.5341494386374,
+          144.44677756643068
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.5720000216397308,
+        0.5171697174659391,
+        -0.011457488201156987,
+        0.0017807496548953472,
+        -0.2602154488203802
+      ],
+      "usb_port": "1-1.2.4",
+      "intrinsics_source": "front",
+      "shared_approximation": true,
+      "T_vehicle_from_camera": [
+        [
+          0.04046899613510428,
+          -0.03669595186798609,
+          -0.9985067187897736,
+          -0.1513809773493721
+        ],
+        [
+          0.9991293846441416,
+          0.011623389457348124,
+          0.04006706325827536,
+          0.029195720507775306
+        ],
+        [
+          0.010135733443454814,
+          -0.999258877335611,
+          0.03713439071181858,
+          0.24310713589719826
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "extrinsics_status": "provisional_manual_ground_points",
+      "intrinsics_provenance_note": "front is a historical source session label, not a verified current physical camera identity"
+    },
+    "left": {
+      "capture_size": [
+        320,
+        240
+      ],
+      "distortion_model": "pinhole",
+      "distortion_order": [
+        "k1",
+        "k2",
+        "p1",
+        "p2",
+        "k3"
+      ],
+      "K": [
+        [
+          271.532931952742,
+          0.0,
+          142.17009476445867
+        ],
+        [
+          0.0,
+          273.5341494386374,
+          144.44677756643068
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.5720000216397308,
+        0.5171697174659391,
+        -0.011457488201156987,
+        0.0017807496548953472,
+        -0.2602154488203802
+      ],
+      "usb_port": "1-1.2.3",
+      "intrinsics_source": "front",
+      "shared_approximation": true,
+      "T_vehicle_from_camera": [
+        [
+          0.997947484035101,
+          -0.05347602514338154,
+          -0.03522972953168742,
+          0.004504722456412122
+        ],
+        [
+          0.03374331740634174,
+          -0.028449030415261287,
+          0.9990255458189478,
+          0.19950013056440882
+        ],
+        [
+          -0.054426166854062916,
+          -0.9981637978825398,
+          -0.026586179836105436,
+          0.23969767518685434
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "extrinsics_status": "provisional_manual_ground_points",
+      "intrinsics_provenance_note": "front is a historical source session label, not a verified current physical camera identity"
+    }
+  },
+  "port_mapping_note": "Current ports corrected by user on 2026-10-31; historical intrinsic source label front is unchanged and does not establish its current physical direction.",
+  "calibration_status": "four_camera_extrinsics_solved_provisional_shared_intrinsics",
+  "source_intrinsics_note": "The intrinsic capture was historically labeled front; camera port mapping later changed. One intrinsic fit is shared by explicit user choice; no independent per-camera intrinsic calibration is asserted."
+}

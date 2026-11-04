@@ -1,0 +1,74 @@
+{
+  "schema": "voice-model-bundle-v1",
+  "name": "vehicle_bert_icraft339_candidate",
+  "adapter": "bert-single-sequence-split-v1",
+  "compiler_sdk": "3.39.0",
+  "target": "ZG330",
+  "files": {
+    "network_json": {
+      "path": "network.json",
+      "bytes": 345680,
+      "sha256": "39913dd9769b74c4737bc7baa9e4f848b2efa163ed0a2d6df10d71cf1d6029cb"
+    },
+    "network_raw": {
+      "path": "network.raw",
+      "bytes": 6977128,
+      "sha256": "5355a249a252d0d5c8f45e622b327b25580d77833b3bc446f7da411735d828f5"
+    },
+    "compile_receipt": {
+      "path": "COMPILATION.json",
+      "bytes": 4991,
+      "sha256": "313e8f1502cc2900ece1527467353486a373a88ea0925579864d9d7ad3179451"
+    },
+    "compiled_contract": {
+      "path": "COMPILED_CONTRACT.json",
+      "bytes": 2127,
+      "sha256": "fc59bfadc9d0af2f279fae7fc9ba1fa36a68d2c36a98aaf2ccb7c599cc60facd"
+    },
+    "word_embeddings": {
+      "path": "word_embeddings.npy",
+      "bytes": 21635200,
+      "sha256": "cd95d2ee2145a86373c15a9b3d9a6e518448d6e9eaf5b9796797caf6935d6e35"
+    },
+    "position_embeddings": {
+      "path": "position_embeddings.npy",
+      "bytes": 524416,
+      "sha256": "90e6b8fd7660899f082ce713b791d616d7a97347f4708f6ef7c4892ebc85aef3"
+    },
+    "token_type_embeddings": {
+      "path": "token_type_embeddings.npy",
+      "bytes": 2176,
+      "sha256": "544fe209b8c4da97245fb9e7d4533c50a773cc8749df29eabbb20a030acee1c4"
+    },
+    "interface": {
+      "path": "interface.json",
+      "bytes": 1071,
+      "sha256": "568f3fbb3792be28146b1d2a7f68f70d34477daa8717e34d4c0669441ccba6e0"
+    },
+    "tokenizer": {
+      "path": "tokenizer.json",
+      "bytes": 439119,
+      "sha256": "e772e5fead29ba73cc246dc3f35ff14a844d9919a7dec1821360bdc4b6677352"
+    },
+    "command_contract": {
+      "path": "command_contract.json",
+      "bytes": 2081,
+      "sha256": "668233bf92e6b19fa39112b99ae8d84143b2a8f1c3976cfdbcef678fe72b3d11"
+    },
+    "evaluation": {
+      "path": "EVALUATION.json",
+      "bytes": 1680,
+      "sha256": "a891933e5182780a8160a5cd43302229f078a206fbfc0c0eb08e11424a01a0f6"
+    },
+    "source_split_evidence": {
+      "path": "EXPORT_VALIDATION.json",
+      "bytes": 1624,
+      "sha256": "83c14182bad8614eb63ce5f8793857f043e3ba52bcda14b61725181883218d39"
+    }
+  },
+  "status": "LOCAL_COMPILED_CANDIDATE_NOT_DEPLOYED",
+  "board_validated": false,
+  "acoustic_validated": false,
+  "hardware_actions_enabled": false,
+  "note": "New vehicle policy integration required; legacy household policy must not execute these labels"
+}

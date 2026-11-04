@@ -1,0 +1,46 @@
+{
+  "schema": "FM-CAMERA-MAPPING/1",
+  "board_boot_id": "7844171b-27bd-47b2-906a-72cca657cc4b",
+  "confirmed_by": "操作员已核对四路相机的设备标识与画面；物理方向至模型槽位的修正由采集工作者执行。",
+  "camera_mapping_confirmed": true,
+  "correction": "Final mapping supersedes all earlier tentative dark-preview orderings: video1 front, video3 back, video5 left, video7 right. Recheck USB device identity before capture.",
+  "cameras": [
+    {
+      "slot": 0,
+      "physical_camera": "front",
+      "device": "/dev/video2",
+      "usb_port": "1-1.2.3",
+      "historical_device": "/dev/video1",
+      "current_sysfs": "/sys/devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/video4linux/video2"
+    },
+    {
+      "slot": 1,
+      "physical_camera": "right",
+      "device": "/dev/video4",
+      "usb_port": "1-1.1.4",
+      "historical_device": "/dev/video7",
+      "current_sysfs": "/sys/devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.1/1-1.1.4/1-1.1.4:1.0/video4linux/video4"
+    },
+    {
+      "slot": 2,
+      "physical_camera": "left",
+      "device": "/dev/video0",
+      "usb_port": "1-1.1.3",
+      "historical_device": "/dev/video5",
+      "current_sysfs": "/sys/devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.1/1-1.1.3/1-1.1.3:1.0/video4linux/video0"
+    },
+    {
+      "slot": 3,
+      "physical_camera": "back",
+      "device": "/dev/video6",
+      "usb_port": "1-1.2.4",
+      "historical_device": "/dev/video3",
+      "current_sysfs": "/sys/devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/video4linux/video6"
+    }
+  ],
+  "source_mapping_boot_id": "3c469ad1-a07f-49c6-be96-88d41e6d00fd",
+  "binding_kind": "user_confirmed_physical_USB_ports_after_user_reboot_to_current_MJPEG_capture_nodes",
+  "source_mapping_sha256": "fc36ccff3516f4f84245b0177ba8f6a6b9ffaaf2ade86ffcf433b4b3d4c67f00",
+  "previous_binding_boot_id": "2f1e58d6-8705-4f9c-930b-84db1e080a6e",
+  "previous_binding_sha256": "719e4e753b727e4406ee0af6d2ac3f87cab65860218a6645387bbeb166c7f7e5"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "fm-voice-validation-authorization-v1",
+  "operator_authorized_candidate_validation": false,
+  "allow_old_model_fallback": false,
+  "production_replacement_allowed": false,
+  "authorization_reference": "REPLACE_AFTER_OPERATOR_CONFIRMATION",
+  "issued_monotonic_s": 0,
+  "expires_monotonic_s": 0,
+  "boot_id": "REPLACE_CURRENT_BOOT_UUID",
+  "model_manifest_sha256": {
+    "asr": "c726c090ecda26aba564dba443bb6c8abbca8b5f97d84e5fec34fbe487840088",
+    "bert": "cfd1f66126e86f858f08ad27b34f1b6c19608063b0d2c2d413c4429768b19b6a",
+    "tts": "acadac1aaa936dccd938459867db8f318a54966fd051b70590ac2284455f083a"
+  }
+}

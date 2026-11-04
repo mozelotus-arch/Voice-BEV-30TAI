@@ -1,0 +1,63 @@
+{
+  "schema": "FM-RUNTIME-RESTORATION/1",
+  "sdk_version": "3.39.0",
+  "board_abi": "Linux ARM64 / CPython 3.8",
+  "sdk_source": "平台提供的 iCraft 3.39.0 on-chip Debian 包和 AArch64 Python wheel",
+  "sdk_archives": [
+    {
+      "name": "commit_id_aarch64.ini",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/runtime339_archives/commit_id_aarch64.ini",
+      "bytes": 1196,
+      "sha256": "46e7804bc67e7c580355f50bb33eea8f65252dbd4c193baaf03250ba26e06342",
+      "included_in_archive": false
+    },
+    {
+      "name": "icraft-3.39.0-cp38-none-manylinux2014_aarch64.whl",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/runtime339_archives/icraft-3.39.0-cp38-none-manylinux2014_aarch64.whl",
+      "bytes": 1795311,
+      "sha256": "f6356fa8b3c9acc114d181721d2c41bed6831d92c1a5472d8768433058323245",
+      "included_in_archive": false
+    },
+    {
+      "name": "Icraft_3.39.0_onchip.deb",
+      "source_project_relative_path": "voice_model_validation_20261031/payload/runtime339_archives/Icraft_3.39.0_onchip.deb",
+      "bytes": 9192096,
+      "sha256": "aa24f938566d8892d262bc87bac8048bb8b41c4e4199870debf96b5cc4615ab3",
+      "included_in_archive": false
+    }
+  ],
+  "restore_runtime_root": "application/runtime339_2g",
+  "library_subdirectory": "usr/lib/aarch64-linux-gnu",
+  "python_subdirectory": "python",
+  "required_allocator_override": "runtime_dependencies/allocator2g.json",
+  "version_scope": "板端Python 3.8相容依赖版本；第三方轮子与SDK安装包需另备。",
+  "native_builds": {
+    "uart": "scripts/build_native.sh -> build/native/libfm_uart_mmio.so -> application/config/private/baseline/libfm_uart_mmio.so",
+    "postprocess": "scripts/build_native.sh -> build/native/postprocess",
+    "camera": "application/camera_continuous/release.json 所列文件已原样包含；仅需要重编译时运行 scripts/build_camera.sh"
+  },
+  "required_boot_sha256": "63da329b16a246050035ca627ede8a8bc2916368b69ee76e29ec0770803a08ae",
+  "boot_source": "已有厂家平台集成UART/NPU的验证镜像；不包含于源码包。此源码包不是完整厂家Vivado平台工程。",
+  "tts_frontend_included": [
+    "application/vendor/voice_policy/tts_engine.py",
+    "application/vendor/voice_policy/xiaoya_prosody.py",
+    "application/vendor/voice_policy/prosody_frontend.py"
+  ],
+  "baseline_directory": "application/config/private/baseline",
+  "baseline_required_files": [
+    "candidate_identity.json",
+    "trial_boot.json",
+    "release_manifest.json",
+    "libfm_uart_mmio.so",
+    "link.key"
+  ],
+  "private_files_generated_by_operator": true,
+  "python_dependency_versions": {
+    "numpy": "1.23.5",
+    "onnxruntime": "1.16.3",
+    "tokenizers": "0.13.3",
+    "kaldi_native_fbank": "1.22.3",
+    "sentencepiece": "0.2.0",
+    "pypinyin": "0.55.0"
+  }
+}

@@ -1,0 +1,28 @@
+<section data-page="vision" class="side-card bev-panel" aria-labelledby="bev-title">
+  <div class="section-heading"><h2 id="bev-title">板端鸟瞰图</h2><span id="bev-badge" class="badge small">等待板端</span></div>
+  <p id="bev-message" class="muted" role="status">等待摄像头照片在板端处理并返回鸟瞰图。</p>
+  <p id="bev-activity" class="footnote" role="status" hidden></p>
+  <div id="photo-controls" hidden>
+    <p class="muted">先采集真实照片，再对本次照片计算鸟瞰图。执行期间暂停聆听，五个模型保持加载；完成后可返回语音页面继续说话。</p>
+    <label><input id="photo-stationary" type="checkbox"> 我已让小车和拍摄场景保持静止</label>
+    <div class="button-row">
+      <button id="photo-warmup" type="button">预热摄像头（录制前）</button>
+      <button id="photo-one-shot" type="button">一键采集并生成鸟瞰图</button>
+      <button id="photo-capture" type="button">采集本次照片</button>
+      <button id="photo-infer" type="button" disabled>生成本次鸟瞰图</button>
+      <a href="#voice">返回语音页面</a>
+    </div>
+    <p id="photo-status" class="footnote" role="status">等待准备</p>
+    <p id="photo-timing" class="footnote" role="status">点击后的计时包含采集、计算、回传和页面呈现；提前加载与预热单独记录。</p>
+    <p id="photo-source" class="footnote"></p>
+    <p id="photo-camera" class="footnote"></p>
+    <div id="photo-images" class="photo-images"></div>
+  </div>
+  <img id="bev-image" alt="板端生成并返回的鸟瞰图" hidden>
+  <p class="footnote">黄色框表示模型实际检测到的目标；灰色背景表示状态未知，零个检测框也不表示没有障碍。此结果不用于实时避障。网格为模型坐标，每格 10 米，X 向右、Y 向前；与实车位置、距离的对应关系尚未验收。</p>
+  <details class="bev-record">
+    <summary>查看本次采集记录</summary>
+    <p id="bev-source" class="footnote"></p>
+  </details>
+  <button id="bev-refresh" type="button">刷新返回结果</button>
+</section>

@@ -1,0 +1,590 @@
+{
+  "schema": "pro_four_camera_geometry_v1",
+  "status": "candidate_lut_generated_not_runtime_validated",
+  "calibration_sha256": "61fd07ac28e8947d80b49402ba6661181b754c500262c3b402ffcd3d6abde58b",
+  "slot_to_physical_camera": [
+    "front",
+    "right",
+    "left",
+    "back",
+    null,
+    null
+  ],
+  "slot_labels_in_existing_reader": [
+    "CAM_FRONT",
+    "CAM_FRONT_RIGHT",
+    "CAM_FRONT_LEFT",
+    "CAM_BACK",
+    "CAM_BACK_LEFT",
+    "CAM_BACK_RIGHT"
+  ],
+  "ports": {
+    "front": "1-1.4.3",
+    "right": "1-1.4.4",
+    "left": "1-1.2.3",
+    "back": "1-1.2.4"
+  },
+  "raw_size_wh": [
+    320,
+    240
+  ],
+  "model_size_wh": [
+    704,
+    256
+  ],
+  "preprocess": {
+    "resize_wh": [
+      341,
+      256
+    ],
+    "pad_ltrb": [
+      181,
+      0,
+      182,
+      0
+    ],
+    "interpolation": "OpenCV INTER_LINEAR half-pixel",
+    "raw_to_model_affine": [
+      [
+        1.065625,
+        0.0,
+        181.0328125
+      ],
+      [
+        0.0,
+        1.0666666666666667,
+        0.033333333333333326
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion": "retain original distorted pixels; LUT projects with K,D",
+    "color": "raw BGR FP32 0..255; model Parser handles RGB and normalization"
+  },
+  "inactive_slots": [
+    4,
+    5
+  ],
+  "inactive_slot_value": 0,
+  "feature_shape_nhwc": [
+    6,
+    64,
+    176,
+    64
+  ],
+  "feature_quantization": "rint(model_pixel/4), ties to even",
+  "overlap_policy": "first valid active slot, matching original LUT reproduction",
+  "lut": {
+    "entries": 160000,
+    "bytes": 1280000,
+    "entry": "little-endian int16 [cam,u,v,pad]",
+    "invalid": [
+      -1,
+      0,
+      0,
+      0
+    ],
+    "linear_index": "((z*200)+y)*200+x"
+  },
+  "limitations": [
+    "Letterboxed distorted USB imagery differs from training images; model accuracy unvalidated.",
+    "Original LUT rounding reproduced; distorted USB geometry still requires board/reference validation.",
+    "The existing C++ Pro preprocessor does not implement this contract.",
+    "Live input, temporal frame conversion and output coordinate conversion remain separate requirements."
+  ],
+  "offline_checks": {
+    "shape": [
+      6,
+      256,
+      704,
+      3
+    ],
+    "dtype": "float32",
+    "inactive_slots_zero": true,
+    "survey_points": {
+      "front": {
+        "source_image": "D:\\Video-input\\camera_calibration\\extrinsic\\front\\20260818_221231_505142\\001.jpg",
+        "sha256": "a4e2778964ea6739cddd8a4e0e75448cf0259b76e1e09b5d66ff2c4a0ee775b7",
+        "all_10_survey_points_retained": true,
+        "raw_reprojection_error_px": [
+          0.8478827816137375,
+          0.2825735795082009,
+          0.28052686221259215,
+          0.9953934065528335,
+          0.26206608622087374,
+          1.6538516698324903,
+          0.95081704956716,
+          0.45995019604002724,
+          1.6299650356150857,
+          2.154938438208962
+        ],
+        "feature_uv": [
+          [
+            89,
+            61
+          ],
+          [
+            67,
+            61
+          ],
+          [
+            110,
+            61
+          ],
+          [
+            82,
+            58
+          ],
+          [
+            96,
+            58
+          ],
+          [
+            89,
+            57
+          ],
+          [
+            89,
+            54
+          ],
+          [
+            89,
+            52
+          ],
+          [
+            74,
+            55
+          ],
+          [
+            104,
+            55
+          ]
+        ],
+        "model_uv": [
+          [
+            355.6192398882878,
+            243.39177304066632
+          ],
+          [
+            267.6278843400933,
+            242.0543910976923
+          ],
+          [
+            440.95856258977904,
+            244.0136479090766
+          ],
+          [
+            327.11908619907126,
+            232.1369865092037
+          ],
+          [
+            384.81361921973576,
+            232.69817197477835
+          ],
+          [
+            356.37691578947613,
+            227.0068907824873
+          ],
+          [
+            356.8008385697786,
+            216.6913708736068
+          ],
+          [
+            357.06454265775653,
+            209.72038704345937
+          ],
+          [
+            297.6154293654822,
+            220.11478566034637
+          ],
+          [
+            414.2877950683243,
+            221.30188035651716
+          ]
+        ]
+      },
+      "back": {
+        "source_image": "D:\\Video-input\\camera_calibration\\extrinsic\\back\\20260818_223308_886080\\001.jpg",
+        "sha256": "ce905401ab186cc89f067739b96ce4c533329bc0ca27781594e9e2f821db5e7a",
+        "all_10_survey_points_retained": true,
+        "raw_reprojection_error_px": [
+          1.8010010279736797,
+          1.6489069466963502,
+          1.918654766673789,
+          0.18510795337507288,
+          0.9076822178870135,
+          1.3357950054183305,
+          0.12219562821004239,
+          0.6523195963634013,
+          1.5503026533410158,
+          3.8024073176798727
+        ],
+        "feature_uv": [
+          [
+            78,
+            61
+          ],
+          [
+            99,
+            61
+          ],
+          [
+            57,
+            60
+          ],
+          [
+            85,
+            58
+          ],
+          [
+            71,
+            58
+          ],
+          [
+            78,
+            57
+          ],
+          [
+            79,
+            55
+          ],
+          [
+            79,
+            53
+          ],
+          [
+            93,
+            56
+          ],
+          [
+            64,
+            55
+          ]
+        ],
+        "model_uv": [
+          [
+            311.2974294968893,
+            242.81386986626205
+          ],
+          [
+            396.95755813423386,
+            244.58362110682617
+          ],
+          [
+            228.8992052725147,
+            240.04746068580812
+          ],
+          [
+            340.6857356170773,
+            233.58333556078085
+          ],
+          [
+            284.57614969436736,
+            232.18264961189342
+          ],
+          [
+            313.0343257723498,
+            227.9972030206281
+          ],
+          [
+            314.1552276375595,
+            218.59771503295207
+          ],
+          [
+            314.9252162158073,
+            212.20992378314003
+          ],
+          [
+            371.3764200703765,
+            223.41492674054658
+          ],
+          [
+            257.3844512145671,
+            220.9048006569146
+          ]
+        ]
+      },
+      "right": {
+        "source_image": "D:\\Video-input\\camera_calibration\\extrinsic\\right\\20260818_223949_321787\\001.jpg",
+        "sha256": "62e288231ea2fc8013801514f4b336a71381018a4cc75bdc6cbfc9ebcd5630fa",
+        "all_10_survey_points_retained": true,
+        "raw_reprojection_error_px": [
+          0.872561867495467,
+          0.346286226248714,
+          0.33722155472913834,
+          0.7702216871139628,
+          0.4484078543858608,
+          1.599536569203972,
+          0.6013236630853086,
+          0.24995232765313455,
+          4.341429143694328,
+          2.134618556139256
+        ],
+        "feature_uv": [
+          [
+            78,
+            60
+          ],
+          [
+            58,
+            58
+          ],
+          [
+            98,
+            62
+          ],
+          [
+            71,
+            57
+          ],
+          [
+            85,
+            58
+          ],
+          [
+            78,
+            56
+          ],
+          [
+            78,
+            54
+          ],
+          [
+            79,
+            53
+          ],
+          [
+            64,
+            54
+          ],
+          [
+            92,
+            56
+          ]
+        ],
+        "model_uv": [
+          [
+            310.35809801993065,
+            239.3995797206063
+          ],
+          [
+            230.33170234039247,
+            230.67375758893868
+          ],
+          [
+            392.3589358087752,
+            247.3632588440603
+          ],
+          [
+            284.5230754034912,
+            227.48795816420784
+          ],
+          [
+            338.7664950237329,
+            233.04449817474512
+          ],
+          [
+            312.1272535648777,
+            225.73935614446629
+          ],
+          [
+            313.27568981770446,
+            217.00065400248997
+          ],
+          [
+            314.06816903715367,
+            211.02625199059065
+          ],
+          [
+            257.91452646597327,
+            214.73677324860242
+          ],
+          [
+            368.599412174812,
+            225.93898832920584
+          ]
+        ]
+      },
+      "left": {
+        "source_image": "D:\\Video-input\\camera_calibration\\extrinsic\\left\\20260818_224339_788614\\001.jpg",
+        "sha256": "3d5b3eecde28de11947859c653ce1dab32dc17137766ef324b07d5f11e7493dc",
+        "all_10_survey_points_retained": true,
+        "raw_reprojection_error_px": [
+          2.3952630313665546,
+          0.9800558399273355,
+          0.8551272945104456,
+          1.2388907573475256,
+          1.6313152145620113,
+          1.9366882290696934,
+          0.8726866097617513,
+          0.667403652116165,
+          1.5925643228523045,
+          4.155724868290882
+        ],
+        "feature_uv": [
+          [
+            86,
+            57
+          ],
+          [
+            108,
+            56
+          ],
+          [
+            64,
+            58
+          ],
+          [
+            94,
+            54
+          ],
+          [
+            79,
+            55
+          ],
+          [
+            86,
+            53
+          ],
+          [
+            86,
+            50
+          ],
+          [
+            86,
+            49
+          ],
+          [
+            101,
+            51
+          ],
+          [
+            71,
+            52
+          ]
+        ],
+        "model_uv": [
+          [
+            344.7503950313311,
+            228.70663351204777
+          ],
+          [
+            433.55335754210887,
+            224.18688088508122
+          ],
+          [
+            255.4676072648664,
+            233.5420442397101
+          ],
+          [
+            374.05455092288594,
+            216.03638292262605
+          ],
+          [
+            314.8170825688171,
+            219.2092744639189
+          ],
+          [
+            344.3303837933314,
+            212.09799919253558
+          ],
+          [
+            344.05100435740724,
+            201.76940516173633
+          ],
+          [
+            343.855999433587,
+            194.84447628150915
+          ],
+          [
+            403.6333817842629,
+            202.85356606847262
+          ],
+          [
+            284.3849292857454,
+            209.2824264761556
+          ]
+        ]
+      }
+    },
+    "ground_diagnostic": {
+      "range_xy_m": [
+        -3,
+        3
+      ],
+      "spacing_m": 0.025,
+      "z_m": 0,
+      "not_model_grid": true,
+      "covered_points": 37660,
+      "total_points": 58081,
+      "by_camera": {
+        "front": 9126,
+        "right": 9873,
+        "left": 9148,
+        "back": 9513
+      },
+      "warning": "Geometric visibility only, ignores occlusion/bodywork; not inference coverage."
+    }
+  },
+  "preview_note": "Calibration images were captured separately, not a synchronized four-camera inference batch.",
+  "grid": {
+    "status": "verified_against_original_lut",
+    "shape_xyz": [
+      200,
+      200,
+      4
+    ],
+    "first_sample_model_m": [
+      -50,
+      -50,
+      -4
+    ],
+    "step_xyz_m": [
+      0.5,
+      0.5,
+      1.5
+    ],
+    "source_reference": "original_lut_recovery.json; 160000/160000 entries byte-exact",
+    "original_lut_sha256": "3f6f53213862b3706835b05cb36f4c8dbfcb2fedd37a9254e5a30a036909d776",
+    "T_vehicle_from_model_grid": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1.8
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "vehicle_frame_mapping_status": "provisional_virtual_lidar_frame",
+    "vehicle_frame_mapping_reason": "Model X right/Y forward; virtual LiDAR origin above rear axle ground origin. Ground Z=-1.8 follows decoder anchor base_z, not recovered physical mounting.",
+    "sample_z_vehicle_m": [
+      -2.2,
+      -0.7,
+      0.8,
+      2.3
+    ],
+    "output_requirement": "Transform decoded box positions, headings and velocities from model frame to vehicle frame before use. Existing runtime does not do this.",
+    "temporal_requirement": "Conjugate vehicle relative poses into model frame and recompute index affine with 0.5 m grid; do not reuse 0.512 m affine metadata."
+  },
+  "lut_sha256": "4d84bb0b918819263a39397881481d83118f84d2d9ecd7bbab1e5e661572d2b8"
+}

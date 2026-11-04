@@ -1,0 +1,10 @@
+# Install compatible ARM64/Python 3.8 wheels in the isolated board environment.
+# iCraft 3.39.0 comes from the platform SDK; do not mix its libraries with another SDK.
+numpy
+opencv-python
+onnxruntime
+tokenizers
+kaldi-native-fbank
+sentencepiece
+pypinyin
+scipy
